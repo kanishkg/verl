@@ -55,7 +55,7 @@ export BASE_MODEL=meta-llama/Llama-3.1-8B
 export DATA_DIR=/scr/kanishkg/countdown
 export ROLLOUT_TP_SIZE=2
 export EXPERIMENT_NAME=countdown_llama-3.1-8b_cd
-export VLLM_ATTENTION_BACKEND=XFORMERS
+# export VLLM_ATTENTION_BACKEND=XFORMERS
 
 # sh ./scripts/train_tiny_zero_n4_cd.sh
 sh ./scripts/train_tiny_zero_n4_cd_8b.sh
