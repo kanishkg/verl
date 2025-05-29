@@ -24,7 +24,6 @@ python3 -m verl.trainer.main_ppo \
     critic.ppo_mini_batch_size=128 \
     critic.ppo_micro_batch_size_per_gpu=2 \
     critic.model.fsdp_config.param_offload=False \
-    critic.model.fsdp_config.grad_offload=False \
     critic.model.fsdp_config.optimizer_offload=False \
     algorithm.kl_ctrl.kl_coef=0.001 \
     trainer.logger=['wandb'] \
