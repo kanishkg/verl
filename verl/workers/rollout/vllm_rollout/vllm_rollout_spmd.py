@@ -90,8 +90,10 @@ class vLLMRollout(BaseRollout):
         assert not (not config.enforce_eager and config.free_cache_engine), "disable CUDA graph (enforce_eager = False) if free cache engine"
 
         tensor_parallel_size = self.config.get("tensor_model_parallel_size", 1)
+        tensor_parallel_size = 2
         assert tensor_parallel_size <= torch.distributed.get_world_size(), "tensor parallel size should be less than or equal to the world size"
         max_num_batched_tokens = self.config.get("max_num_batched_tokens", 8192)
+        max_num_batched_tokens = 2048
 
         if kwargs.get("train_tp") is not None:
             # deployed with megatron
