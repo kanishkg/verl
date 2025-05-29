@@ -32,7 +32,7 @@ python3 -m verl.trainer.main_ppo \
     trainer.nnodes=1 \
     trainer.project_name=behavior_amplification \
     trainer.experiment_name=$EXPERIMENT_NAME \
-    +trainer.val_before_train=False \
+    ++trainer.val_before_train=False \
     trainer.save_freq=10 \
     trainer.test_freq=10 \
     trainer.default_local_dir=/scratch/m000084/kanishkg/ba/models/$EXPERIMENT_NAME \
